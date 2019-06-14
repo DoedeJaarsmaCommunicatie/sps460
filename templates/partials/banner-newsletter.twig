@@ -1,0 +1,42 @@
+<section class="lg:border-t lg:border-b border-primary">
+    <div class="container mx-auto lg:flex">
+        <aside class="background-breakout text-secondary lg:w-1/2 content p-8 md:px-0">
+            <h4>
+                {{ theme.theme_mod('inloop-title') }}
+            </h4>
+            {{ theme.theme_mod('inloop-content')|wpautop }}
+
+            <table class="inloop-date">
+                <tr>
+                    <th>Datum:</th>
+                    <td>{{ theme.theme_mod('inloop-date')|localizeddate('long', 'none', 'nl_NL') }}</td>
+                </tr>
+                <tr>
+                    <th>Tijd:</th>
+                    <td>{{ theme.theme_mod('inloop-tijd') }}</td>
+                </tr>
+                <tr>
+                    <th>Locatie:</th>
+                    <td>{{ theme.theme_mod('inloop-locatie') }}</td>
+                </tr>
+            </table>
+        </aside>
+        <aside class="content p-8 lg:w-1/2 text-primary">
+            <h4>
+                {{ theme.theme_mod('mailchimp-titel') }}
+            </h4>
+
+            {{ theme.theme_mod('mailchimp-content')|wpautop }}
+            <form class="mailchimp-form" action="#" method="post">
+                <input class="control primary grid-fname" required type="text" id="FNAME" name="FNAME" placeholder="voornaam*"/>
+                <input class="control primary grid-lname" type="text" id="LNAME" name="LNAME" placeholder="achternaam"/>
+                <input class="control primary grid-pcode" type="text" id="PCODE" name="PCODE" placeholder="postcode"/>
+                <input class="control primary grid-email" required type="email" id="EMAIL" name="EMAIL" placeholder="e-mailadres*"/>
+
+
+                <input type="hidden" />
+                <button class="btn primary grid-send" type="submit">aanmelden<button>
+            </form>
+        </aside>
+    </div>
+</section>

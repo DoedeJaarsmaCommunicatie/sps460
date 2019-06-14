@@ -3,3 +3,5 @@
 !*.twig
 !base/
 !base/helpers/
+!partials/
+!partials/front-page/

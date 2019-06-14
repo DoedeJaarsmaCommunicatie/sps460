@@ -1,23 +1,25 @@
 {% set _logo = Image(theme.theme_mod('custom_logo')) %}
-<header class="sps--header container mx-auto py-6 lg:flex">
+<header class="sps--header container mx-auto py-6 flex px-4 md:px-0 relative">
     <a href={{ site.link }}>
-        <figure>
-            <img 
-                src="{{ _logo.src }}" 
-                alt="{{ _logo.alt }}" 
+        <figure class="custom-logo">
+            <img
+                src="{{ _logo.src }}"
+                alt="{{ _logo.alt }}"
                 title="{{ _logo.title }}"
             />
         </figure>
     </a>
-    <nav class="primaryNavigation">
+    <button class="ml-auto lg:hidden" onclick="document.querySelector('#main-menu').classList.toggle('hidden');">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav class="primaryNavigation hidden lg:flex" id="main-menu">
         {% for item in primaryMenu.items %}
             <div class="submenuContainer">
                 <a href="{{ item.link }}" class="{{ item.classes|join(' ') }}" title="{{ item.title }}">
                     {{ item.title }}
                 </a>
-
                 {% if item.children %}
-                    <ul class="submenu">
+                    <ul class="submenu px-4 md:px-0">
                         {% for child in item.children %}
                             <a href="{{ child.link}}" title="{{ child.title }}" class="submenu-item{{ child.classes|join(' ')}}">
                                 {{ child.title }}

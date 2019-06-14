@@ -1,4 +1,10 @@
-.sps--header {}
+.sps--header {
+    & .custom-logo {
+        & > img {
+            max-width: 202px;
+        }
+    }
+}
 
 .primaryNavigation {
     @apply ml-auto flex items-end;
@@ -21,28 +27,39 @@
         }
 
         position: relative;
-        & .submenu {
-            @apply shadow;
-            position: absolute;
-            transition: all 225ms cubic-bezier(0.2, 0.4, 0.0, 1.0);
-            transform: scale(0);
-            transform-origin: top left;
-            display: flex;
-            flex-direction: column;
-            flex: 1 1 auto;
-            background-color: theme('colors.white.default');
-            z-index: 20;
-            padding: 1rem 0.5rem;
-
-            & .submenu-item:not(:last-of-type) {
-                margin-bottom: 0.5rem;
-            }
-        }
-
-        &:hover {
+        @screen md {
             & .submenu {
-                transform: scale(1);
+                @apply shadow;
+                position: absolute;
+                transition: all 225ms cubic-bezier(0.2, 0.4, 0.0, 1.0);
+                transform: scale(0);
+                transform-origin: top left;
+                display: flex;
+                flex-direction: column;
+                flex: 1 1 auto;
+                background-color: theme('colors.white.default');
+                z-index: 20;
+                padding: 1rem 0.5rem;
+
+                & .submenu-item:not(:last-of-type) {
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            &:hover {
+                & .submenu {
+                    transform: scale(1);
+                }
             }
         }
+    }
+
+    @media screen and (max-width: theme('screens.md')) {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        background: theme('colors.white.default');
+        padding: 0 1rem;
     }
 }

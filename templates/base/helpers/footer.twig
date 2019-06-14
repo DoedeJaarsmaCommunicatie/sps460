@@ -1,8 +1,11 @@
-<footer class="bg-primary">
+{% set _logoFooter = Image(theme.theme_mod('footer-logo')) %}
+<footer class="bg-primary py-12 px-4 md:px-0">
     <section class="container mx-auto lg:flex">
         <figure>
-            <img 
-
+            <img
+                    src="{{ _logoFooter.src }}"
+                    alt="{{ _logoFooter.alt }}"
+                    title="{{ _logoFooter.title }}"
             />
         </figure>
         <nav class="ml-auto lg:flex footerMenu py-4">
@@ -11,6 +14,6 @@
                     {{ item.title }}
                 </a>
             {% endfor %}
-        </flex>
+        </nav>
     </section>
 </footer>

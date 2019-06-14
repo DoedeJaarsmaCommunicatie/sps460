@@ -17,8 +17,8 @@ class GeneralController extends Customizer {
 	 */
 	protected $section = [
 		'id'          => 'general',
-		'title'       => 'Algemene instellingen',
-		'description' => 'Algemene instellingen',
+		'title'       => 'Uitnodigingen blok',
+		'description' => 'Dit is het blok in het bruine vlak.',
 	];
 
 	/**
@@ -34,7 +34,7 @@ class GeneralController extends Customizer {
 				'settings' => 'inloop-title',
 			]
 		);
-		
+
 		Kirki::add_field(
 			'sps460',
 			[
@@ -44,7 +44,6 @@ class GeneralController extends Customizer {
 				'settings' => 'inloop-content',
 			]
 		);
-		
 
 		Kirki::add_field(
 			'sps460',

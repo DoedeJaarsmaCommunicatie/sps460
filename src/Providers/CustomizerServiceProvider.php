@@ -8,8 +8,10 @@
 
 namespace App\Providers;
 
-use Kirki;
+use App\Controllers\Customizer\FooterController;
 use App\Controllers\Customizer\GeneralController;
+use App\Controllers\Customizer\MailchimpController;
+use Kirki;
 
 /**
  * Class CustomizerServiceProvider
@@ -40,6 +42,7 @@ class CustomizerServiceProvider {
 		);
 
 		new GeneralController();
-
+		new MailchimpController();
+		new FooterController();
 	}
 }

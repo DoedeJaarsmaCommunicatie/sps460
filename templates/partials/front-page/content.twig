@@ -1,0 +1,19 @@
+{% set _content = fn('get_field', 'content', post.ID) %}
+{% set _content_image = Image(_content.image) %}
+
+<section class="container mx-auto lg:flex lg:mt-8 px-4 md:px-0">
+    <main class="lg:w-2/5">
+        <h1 class="hero title mb-4">
+            {{ _content.title }}
+        </h1>
+        {{ _content.content|wpautop }}
+    </main>
+
+    <figure class="lg:ml-auto lg:w-1/2">
+        <img
+            src="{{ _content_image.src }}"
+            alt="{{ _content_image.alt }}"
+            title="{{ _content_image.title }}"
+        />
+    </figure>
+</section>

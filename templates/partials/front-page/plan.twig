@@ -1,0 +1,19 @@
+{% set _plan = fn('get_field', 'plan', post.ID) %}
+{% set _plan_image = Image(_plan.image) %}
+
+<section class="container mx-auto lg:mt-8 px-4 md:px-0 lg:flex">
+    <figure class="lg:w-1/3 lg:mx-auto">
+        <img
+            src="{{ _plan_image.src }}"
+            alt="{{ _plan_image.alt }}"
+            title="{{ _plan_image.title }}"
+        />
+    </figure>
+
+    <aside class="lg:w-1/2">
+        <h1 class="hero title mb-4">
+            {{ _plan.title }}
+        </h1>
+        {{ _plan.content|wpautop }}
+    </aside>
+</section>
