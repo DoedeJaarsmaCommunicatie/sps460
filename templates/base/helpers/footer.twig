@@ -1,0 +1,16 @@
+<footer class="bg-primary">
+    <section class="container mx-auto lg:flex">
+        <figure>
+            <img 
+
+            />
+        </figure>
+        <nav class="ml-auto lg:flex footerMenu py-4">
+            {% for item in footerMenu.items %}
+                <a href="{{ item.link }}" class="{{ item.classes|join(' ') }}" title="{{ item.title }}">
+                    {{ item.title }}
+                </a>
+            {% endfor %}
+        </flex>
+    </section>
+</footer>

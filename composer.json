@@ -3,7 +3,9 @@
     "description": "A WordPress theme for spaarndammerstraat 460",
     "require": {
         "yahnis-elsts/plugin-update-checker": "^4.6",
-        "aristath/kirki": "^3.0"
+        "aristath/kirki": "^3.0",
+        "timber/timber": "^1.10",
+        "twig/extensions": "^1.5"
     },
     "autoload": {
         "psr-4": {

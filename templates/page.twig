@@ -1,0 +1,18 @@
+{% extends 'base/app.twig' %}
+
+{% block content %}
+    <main class="container mx-auto lg:mb-12">
+        <header class="mb-4">
+            <figure class="hero full"> 
+                <img
+                    src="{{ post.thumbnail.src }}"
+                    alt="{{ post.thumbnail.alt }}"
+                    title="{{ post.thumbnail.title }}"
+                 />
+            </figure>
+        </header>
+        <section class="content">
+            {{ post.content }}
+        </section>
+    </main>
+{% endblock %}
