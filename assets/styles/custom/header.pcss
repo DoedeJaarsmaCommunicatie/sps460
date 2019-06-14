@@ -1,0 +1,48 @@
+.sps--header {}
+
+.primaryNavigation {
+    @apply ml-auto flex items-end;
+
+    & .menu-item {
+        transition: all 225ms cubic-bezier(0.2, 0.4, 0.0, 1.0);
+
+        &:not(:last-of-type) {
+            @apply mr-12;
+        }
+
+        &:hover {
+            color: theme('colors.primary.default');
+        }
+    }
+
+    & .submenuContainer {
+        &:not(:last-of-type) {
+            @apply mr-12;
+        }
+
+        position: relative;
+        & .submenu {
+            @apply shadow;
+            position: absolute;
+            transition: all 225ms cubic-bezier(0.2, 0.4, 0.0, 1.0);
+            transform: scale(0);
+            transform-origin: top left;
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+            background-color: theme('colors.white.default');
+            z-index: 20;
+            padding: 1rem 0.5rem;
+
+            & .submenu-item:not(:last-of-type) {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        &:hover {
+            & .submenu {
+                transform: scale(1);
+            }
+        }
+    }
+}

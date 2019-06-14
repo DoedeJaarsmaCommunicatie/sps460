@@ -9,3 +9,6 @@ require_once get_stylesheet_directory() . '/vendor/aristath/kirki/kirki.php';
 require_once get_stylesheet_directory() . '/vendor/autoload.php'; 
 
 add_theme_support('custom-logo');
+add_theme_support( 'post-thumbnails' );
+
+\Timber\Timber::$locations = get_stylesheet_directory() . '/templates';
