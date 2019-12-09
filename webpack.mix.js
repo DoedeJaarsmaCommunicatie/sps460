@@ -6,4 +6,5 @@ mix.postCss('assets/styles/main.pcss', 'dist/styles', [
     require('tailwindcss'),
     require('postcss-color-function'),
     require('postcss-preset-env')({stage: 1}),
-]);
+])
+    .js('assets/vue/app.js', 'dist/scripts');

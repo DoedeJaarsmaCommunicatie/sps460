@@ -2,19 +2,23 @@
 
 {% block content %}
     {% include 'partials/front-page/hero.twig' %}
-    
+
     {% include 'partials/front-page/content.twig' %}
 
     {% include 'partials/banner-newsletter.twig' %}
 
     {% include 'partials/front-page/plan.twig' %}
 
-    <iframe 
+    <section id="vue-app">
+        <kbg-subscribe></kbg-subscribe>
+    </section>
+
+    <iframe
         class="mt-12"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1329.015525771652!2d4.887242692253115!3d52.3445635161324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60979703d19c7%3A0xf6eef781a4a256c0!2sMidvast+B.V.!5e0!3m2!1sen!2snl!4v1560428387824!5m2!1sen!2snl" 
-        height="450" 
-        frameborder="0" 
-        style="border:0; width: 100%;" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.9903762074973!2d4.878025115802574!3d52.38872477978952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6082cca983985%3A0xf6976399fd5d50a6!2sSpaarndammerstraat+460%2C+1013+SZ+Amsterdam!5e0!3m2!1sen!2snl!4v1561010049437!5m2!1sen!2snl"
+        height="450"
+        frameborder="0"
+        style="border:0; width: 100%;"
         allowfullscreen
         ></iframe>
 {% endblock %}
