@@ -9,8 +9,16 @@
 
     {% include 'partials/front-page/plan.twig' %}
 
-    <section id="vue-app">
-        <kbg-subscribe></kbg-subscribe>
+    <section id="vue-app" class="container mx-auto lg:flex">
+        <aside class="content p-8 lg:w-1/2 text-primary">
+            <h4>Aanmelden klankbordgroep</h4>
+            <p>
+                Wilt u nog beter op de hoogte blijven bij de
+                transformatie van de Spaarndammerstraat 460?
+                Meldt u dan aan voor de klankbordgroep.
+            </p>
+        </aside>
+        <aside class="content p-8 lg:w-1/2 text-primary"><kbg-subscribe></kbg-subscribe></aside>
     </section>
 
     <iframe
