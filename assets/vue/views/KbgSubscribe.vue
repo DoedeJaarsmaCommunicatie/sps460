@@ -5,6 +5,19 @@
         <sps-input label="Postcode"  name="postalCode" placeholder :required="true" />
         <sps-input label="Huisnummer"  name="houseNumber" placeholder :required="true" />
         <sps-input label="E-mailadres"  name="email" type="email" :required="true" placeholder />
+        <div>
+            <h6>
+                Ik ben aanwezig bij:
+            </h6>
+            <label class="block">
+                <input type="checkbox" name="availability[]" id="bijeenkomst-1" value="bijeenkomst-1">
+                Bijeenkomst 1
+            </label>
+            <label class="block">
+                <input type="checkbox" name="availability[]" id="bijeenkomst-2" value="bijeenkomst-2">
+                Bijeenkomst 2
+            </label>
+        </div>
         <button type="submit" class="btn primary">aanmelden</button>
         
         <section v-if="status">
@@ -33,7 +46,7 @@
                     this.status = 'Bedankt voor uw aanmelding.'
                 }
             } catch (e) {
-                this.status = 'U bent al eerder aangemeld.'
+                this.status = 'U bent al aangemeld, of het formulier is niet goed ingevuld. (Is er minimaal een beschikbare datum aangegeven)';
             }
             
             e.target.reset();

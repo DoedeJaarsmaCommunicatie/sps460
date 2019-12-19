@@ -6,20 +6,23 @@
             </h4>
             {{ theme.theme_mod('inloop-content')|wpautop }}
 
-            <table class="inloop-date">
-                <tr>
-                    <th>Datum:</th>
-                    <td>{{ theme.theme_mod('inloop-date')|localizeddate('long', 'none', 'nl_NL') }}</td>
-                </tr>
-                <tr>
-                    <th>Tijd:</th>
-                    <td>{{ theme.theme_mod('inloop-tijd') }}</td>
-                </tr>
-                <tr>
-                    <th>Locatie:</th>
-                    <td>{{ theme.theme_mod('inloop-locatie') }}</td>
-                </tr>
-            </table>
+            {% for moment in theme.theme_mod('date-table-rows') %}
+                <h5><strong>{{ moment.title }}</strong></h5>
+                <table class="inloop-date">
+                    <tr>
+                        <th>Datum:</th>
+                        <td>{{ moment.date|localizeddate('long', 'none', 'nl_NL') }}</td>
+                    </tr>
+                    <tr>
+                        <th>Tijd:</th>
+                        <td>{{ moment.time }}</td>
+                    </tr>
+                    <tr>
+                        <th>Locatie:</th>
+                        <td>{{ moment.location }}</td>
+                    </tr>
+                </table>
+            {% endfor %}
         </aside>
         <aside class="content p-8 lg:w-1/2 text-primary">
             <h4>
@@ -27,7 +30,7 @@
             </h4>
 
             {{ theme.theme_mod('mailchimp-content')|wpautop }}
-            
+
             <form class="mailchimp-form" action="https://spaarndammerstraat460.us3.list-manage.com/subscribe/post?u=dd391a7f09b8744b74cb56ba6&amp;id=96ab63469d" method="post">
                 <input class="control primary grid-fname" required type="text" id="FNAME" name="FNAME" placeholder="voornaam*"/>
                 <input class="control primary grid-lname" type="text" id="LNAME" name="LNAME" placeholder="achternaam"/>

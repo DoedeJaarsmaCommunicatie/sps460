@@ -48,30 +48,29 @@ class GeneralController extends Customizer {
 		Kirki::add_field(
 			'sps460',
 			[
-				'type'     => 'date',
-				'section'  => $this->section['id'],
-				'label'    => esc_html( 'Datum' ),
-				'settings' => 'inloop-date',
-			]
-		);
+				'type'      => 'repeater',
+				'label'     => 'Bijeenkomsten',
+				'section'   => $this->section['id'],
+				'settings'  => 'date-table-rows',
+				'fields'    => [
+					'title'     => [
+						'type'      => 'text',
+						'label'     => 'Titel',
+					],
+					'date'      => [
+						'type'      => 'date',
+						'label'     => 'Datum',
+					],
+					'time'      => [
+						'type'  => 'text',
+						'label' => 'Tijd',
+					],
+					'location'  => [
+						'type'  => 'text',
+						'label' => 'Locatie'
+					]
+				],
 
-		Kirki::add_field(
-			'sps460',
-			[
-				'type'     => 'text',
-				'section'  => $this->section['id'],
-				'label'    => esc_html( 'Tijd' ),
-				'settings' => 'inloop-tijd',
-			]
-		);
-
-		Kirki::add_field(
-			'sps460',
-			[
-				'type'     => 'text',
-				'section'  => $this->section['id'],
-				'label'    => esc_html( 'Locatie' ),
-				'settings' => 'inloop-locatie',
 			]
 		);
 	}
