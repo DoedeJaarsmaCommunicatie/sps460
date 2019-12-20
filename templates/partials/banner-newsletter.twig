@@ -24,23 +24,15 @@
                 </table>
             {% endfor %}
         </aside>
-        <aside class="content p-8 lg:w-1/2 text-primary">
-            <h4>
-                {{ theme.theme_mod('mailchimp-titel') }}
-            </h4>
+        <aside class="content p-8 lg:w-1/2 text-primary" id="vue-app">
+            <h4>Aanmelden voor de buurtbijeenkomsten</h4>
+            <p>
+                Wilt u nog beter op de hoogte blijven bij de
+                transformatie van de Spaarndammerstraat 460?
+                Meldt u dan aan voor de Buurtbijeenkomst.
+            </p>
 
-            {{ theme.theme_mod('mailchimp-content')|wpautop }}
-
-            <form class="mailchimp-form" action="https://spaarndammerstraat460.us3.list-manage.com/subscribe/post?u=dd391a7f09b8744b74cb56ba6&amp;id=96ab63469d" method="post">
-                <input class="control primary grid-fname" required type="text" id="FNAME" name="FNAME" placeholder="voornaam*"/>
-                <input class="control primary grid-lname" type="text" id="LNAME" name="LNAME" placeholder="achternaam"/>
-                <input class="control primary grid-pcode" type="text" id="PCODE" name="PCODE" placeholder="postcode"/>
-                <input class="control primary grid-email" required type="email" id="EMAIL" name="EMAIL" placeholder="e-mailadres*"/>
-
-
-                <input type="hidden" />
-                <button class="btn primary grid-send" type="submit">aanmelden<button>
-            </form>
+            <kbg-subscribe></kbg-subscribe>
         </aside>
     </div>
 </section>
