@@ -9,26 +9,28 @@
 
     {% include 'partials/front-page/plan.twig' %}
 
-    <section class="container mx-auto lg:mt-8 px-4 md:px-0 lg:flex">
-        <aside class="content p-8 lg:w-1/2 text-primary">
-            <h4>
-                {{ theme.theme_mod('mailchimp-titel') }}
-            </h4>
+    <div class="border-t-2 border-primary lg:mt-8">
+        <section class="container mx-auto px-4 md:px-0 lg:flex">
+            <aside class="content p-8 lg:w-1/2 text-primary">
+                <h4>
+                    {{ theme.theme_mod('mailchimp-titel') }}
+                </h4>
 
-            {{ theme.theme_mod('mailchimp-content')|wpautop }}
-        </aside>
-        <aside class="content p-8 lg:w-1/2 text-primary">
-            <form class="mailchimp-form" action="https://spaarndammerstraat460.us3.list-manage.com/subscribe/post?u=dd391a7f09b8744b74cb56ba6&amp;id=96ab63469d" method="post">
-                <input class="control primary grid-fname" required type="text" id="FNAME" name="FNAME" placeholder="voornaam*" />
-                <input class="control primary grid-lname" type="text" id="LNAME" name="LNAME" placeholder="achternaam" />
-                <input class="control primary grid-pcode" type="text" id="PCODE" name="PCODE" placeholder="postcode" />
-                <input class="control primary grid-email" required type="email" id="EMAIL" name="EMAIL" placeholder="e-mailadres*" />
+                {{ theme.theme_mod('mailchimp-content')|wpautop }}
+            </aside>
+            <aside class="content p-8 lg:w-1/2 text-primary">
+                <form class="mailchimp-form" action="https://spaarndammerstraat460.us3.list-manage.com/subscribe/post?u=dd391a7f09b8744b74cb56ba6&amp;id=96ab63469d" method="post">
+                    <input class="control primary grid-fname" required type="text" id="FNAME" name="FNAME" placeholder="voornaam*" />
+                    <input class="control primary grid-lname" type="text" id="LNAME" name="LNAME" placeholder="achternaam" />
+                    <input class="control primary grid-pcode" type="text" id="PCODE" name="PCODE" placeholder="postcode" />
+                    <input class="control primary grid-email" required type="email" id="EMAIL" name="EMAIL" placeholder="e-mailadres*" />
 
-                <input type="hidden" />
-                <button class="btn primary grid-send" type="submit">aanmelden</button>
-            </form>
-        </aside>
-    </section>
+                    <input type="hidden" />
+                    <button class="btn primary grid-send" type="submit">aanmelden</button>
+                </form>
+            </aside>
+        </section>
+    </div>
 
     <iframe
         class="mt-12"

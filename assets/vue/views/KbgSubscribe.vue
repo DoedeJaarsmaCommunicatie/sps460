@@ -3,7 +3,7 @@
         <sps-input label="Voornaam"  name="firstName" placeholder :required="true" />
         <sps-input label="Achternaam"  name="lastName" placeholder :required="true" />
         <sps-input label="Postcode"  name="postalCode" placeholder :required="true" />
-        <sps-input label="Huisnummer"  name="houseNumber" placeholder :required="true" />
+        <sps-input label="Huisnummer"  name="houseNumber" placeholder />
         <sps-input label="E-mailadres"  name="email" type="email" :required="true" placeholder />
         <div>
             <h6>
@@ -59,7 +59,7 @@
     @media screen and (min-width: 768px) {
         #kbgForm {
             display: grid;
-            grid-gap: 20px;
+            grid-gap: 10px;
             grid-template-columns: 1fr 1fr;
         }
     }
